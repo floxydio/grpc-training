@@ -1,0 +1,1 @@
+protoc --go_out=./pkg proto/*.proto --go-grpc_out=./pkg

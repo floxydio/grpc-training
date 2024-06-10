@@ -1,0 +1,27 @@
+syntax = "proto3";
+package shopgrpc;
+
+
+option go_package = "./shopgrpc";
+
+message SliderRequest {
+    string slider_image = 1;
+    int32 active = 2;
+    string created_at = 3;
+}
+
+message SliderRequestResponse {
+    int32 status = 1;
+    string message = 2;
+}
+
+message SliderResponse {
+    int32 status = 1;
+    SliderRequest data = 2;
+    string message = 3;
+}
+
+service SliderService {
+    rpc CreateSlider(SliderRequest) returns (SliderRequestResponse);
+    rpc GetSlider(SliderRequest) returns (SliderResponse);
+}
