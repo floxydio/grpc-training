@@ -28,7 +28,7 @@ message SignUpRequest {
   string email = 2;
   string password = 3;
   Role role = 4;
-  google.protobuf.Timestamp created_at = 6;
+  optional google.protobuf.Timestamp created_at = 6;
 }
 
 message SignUpResponse {

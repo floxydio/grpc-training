@@ -66,7 +66,10 @@ const SignUpRequest$json = {
     {'1': 'email', '3': 2, '4': 1, '5': 9, '10': 'email'},
     {'1': 'password', '3': 3, '4': 1, '5': 9, '10': 'password'},
     {'1': 'role', '3': 4, '4': 1, '5': 14, '6': '.shopgrpc.Role', '10': 'role'},
-    {'1': 'created_at', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createdAt'},
+    {'1': 'created_at', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '9': 0, '10': 'createdAt', '17': true},
+  ],
+  '8': [
+    {'1': '_created_at'},
   ],
 };
 
@@ -74,8 +77,8 @@ const SignUpRequest$json = {
 final $typed_data.Uint8List signUpRequestDescriptor = $convert.base64Decode(
     'Cg1TaWduVXBSZXF1ZXN0EhIKBG5hbWUYASABKAlSBG5hbWUSFAoFZW1haWwYAiABKAlSBWVtYW'
     'lsEhoKCHBhc3N3b3JkGAMgASgJUghwYXNzd29yZBIiCgRyb2xlGAQgASgOMg4uc2hvcGdycGMu'
-    'Um9sZVIEcm9sZRI5CgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdG'
-    'FtcFIJY3JlYXRlZEF0');
+    'Um9sZVIEcm9sZRI+CgpjcmVhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdG'
+    'FtcEgAUgljcmVhdGVkQXSIAQFCDQoLX2NyZWF0ZWRfYXQ=');
 
 @$core.Deprecated('Use signUpResponseDescriptor instead')
 const SignUpResponse$json = {
