@@ -4,10 +4,21 @@ import (
 	"shopgrpc/database"
 	"shopgrpc/models"
 	pb "shopgrpc/pkg/shopgrpc"
+	"time"
 )
 
 func CreateProduct(form *pb.ProductRequest) error {
-	err := database.DBAccess.Create(&models.Product{}).Error
+	time := time.Now()
+
+	err := database.DBAccess.Create(&models.Product{
+		Nama:         form.Nama,
+		Category:     form.Category,
+		Quantity:     form.Quantity,
+		Price:        float64(form.Price),
+		ProductImage: form.ProductImage,
+		SellerId:     int(form.SellerId),
+		CreatedAt:    time.Format("2006-01-02 15:04:05"),
+	}).Error
 
 	if err != nil {
 		return err
