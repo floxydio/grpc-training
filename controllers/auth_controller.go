@@ -25,7 +25,7 @@ func (cntrl *AuthServiceController) SignUp(ctx context.Context, in *pb.SignUpReq
 		return &pb.SignUpResponse{Status: 400, Message: err.Error()}, nil
 	}
 
-	return &pb.SignUpResponse{Status: 200, Message: "Successfully Created Account"}, nil
+	return &pb.SignUpResponse{Status: 201, Message: "Successfully Created Account"}, nil
 }
 
 func (cntrl *AuthServiceController) Login(ctx context.Context, in *pb.LoginRequest) (*pb.LoginResponse, error) {
@@ -51,5 +51,5 @@ func (cntrl *AuthServiceController) Login(ctx context.Context, in *pb.LoginReque
 	claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
 	t, _ := token.SignedString([]byte("secret_k333y"))
 
-	return &pb.LoginResponse{Status: 200, Token: &t, Message: "Successfully Login"}, nil
+	return &pb.LoginResponse{Status: 200, Role: &findUser.Role, Token: &t, Message: "Successfully Login"}, nil
 }

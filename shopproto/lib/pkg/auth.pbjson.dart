@@ -45,18 +45,21 @@ const LoginResponse$json = {
   '1': 'LoginResponse',
   '2': [
     {'1': 'status', '3': 1, '4': 1, '5': 5, '10': 'status'},
-    {'1': 'token', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'token', '17': true},
-    {'1': 'message', '3': 3, '4': 1, '5': 9, '10': 'message'},
+    {'1': 'role', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'role', '17': true},
+    {'1': 'token', '3': 3, '4': 1, '5': 9, '9': 1, '10': 'token', '17': true},
+    {'1': 'message', '3': 4, '4': 1, '5': 9, '10': 'message'},
   ],
   '8': [
+    {'1': '_role'},
     {'1': '_token'},
   ],
 };
 
 /// Descriptor for `LoginResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List loginResponseDescriptor = $convert.base64Decode(
-    'Cg1Mb2dpblJlc3BvbnNlEhYKBnN0YXR1cxgBIAEoBVIGc3RhdHVzEhkKBXRva2VuGAIgASgJSA'
-    'BSBXRva2VuiAEBEhgKB21lc3NhZ2UYAyABKAlSB21lc3NhZ2VCCAoGX3Rva2Vu');
+    'Cg1Mb2dpblJlc3BvbnNlEhYKBnN0YXR1cxgBIAEoBVIGc3RhdHVzEhcKBHJvbGUYAiABKAlIAF'
+    'IEcm9sZYgBARIZCgV0b2tlbhgDIAEoCUgBUgV0b2tlbogBARIYCgdtZXNzYWdlGAQgASgJUgdt'
+    'ZXNzYWdlQgcKBV9yb2xlQggKBl90b2tlbg==');
 
 @$core.Deprecated('Use signUpRequestDescriptor instead')
 const SignUpRequest$json = {
