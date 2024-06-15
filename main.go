@@ -21,9 +21,11 @@ func main() {
 	s := grpc.NewServer()
 	authController := controllers.NewAuthServiceController()
 	sliderController := controllers.NewSliderServiceController()
+	productController := controllers.NewProductServiceController()
 
 	pb.RegisterAuthServiceServer(s, authController)
 	pb.RegisterSliderServiceServer(s, sliderController)
+	pb.RegisterProductServiceServer(s, productController)
 
 	reflection.Register(s)
 
